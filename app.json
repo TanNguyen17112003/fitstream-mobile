@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "tsa",
+    "slug": "tsa",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/TSA_logo.png",
+    "userInterfaceStyle": "light",
+    "scheme": "tsa",
+    "splash": {
+      "image": "./assets/splash.png",
+      "backgroundColor": "#5CC990",
+      "resizeMode": "cover"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/TSA_adaptive_logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./config/google-services.json",
+      "package": "com.ttq.tsa",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoicXVhbmNhbzIzMTAiLCJhIjoiY20yNXU4aHVxMHYxdzJxcXNudXh0ZmdiYSJ9.3zLWsysWsrpT-bi5c7hn5w",
+          "RNMapboxMapsVersion": "11.0.0"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Cho phép $(PRODUCT_NAME) truy cập vị trí của bạn khi bạn đang sử dụng ứng dụng và khi bạn không sử dụng ứng dụng.",
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "36f94f7b-83dc-4560-9474-3db4b97bdb06"
+      }
+    },
+    "owner": "tue.tran"
+  }
+}
